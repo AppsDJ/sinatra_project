@@ -1,15 +1,14 @@
 require 'sinatra'
+require 'sinatra/reloader' if development?
 
 get '/' do
   "Hello world"
 end
 
 get '/secret' do
-  "Hello from Zee and Ty!!"
+  "Hello from Zee, Ty and Noby!!"
 end
 
 get '/cat' do
-    "<div style='border: 3px dotted green' >
-    <img src='http://bit.ly/1eze8aE'>
-    </div>"
+  erb(:index)
 end
