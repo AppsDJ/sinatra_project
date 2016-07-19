@@ -1,6 +1,6 @@
 
 
-<% if @name %>
+<% if @name && !@name.empty? %>
   <h1>My first name is <%= @name %></h1>
 <% else %>
   <form action="/named-cat" method="GET">
